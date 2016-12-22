@@ -1,0 +1,7 @@
+<div class="col-md-4 input-group custom-search-form">
+  <input type="text" ng-model="searchText" class="form-control" placeholder="Search publications...">
+</div>
+<h3><b>Publications</b></h3></br>
+<ul>
+  <li ng-repeat="publication in publications | filter:searchText"><p ng-bind-html="publication" class="text-justify"></p></li>
+</ul>

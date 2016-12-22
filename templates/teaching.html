@@ -1,0 +1,8 @@
+<h3><strong>Teaching</strong></h3></br>
+<div ng-repeat="teaching in teachings">
+  <p><strong>{{teaching.year}}</strong></p>
+  <ul>
+    <li ng-repeat="subject in teaching.subjects">{{subject}}</li>
+  </ul>
+  </br>
+</div>

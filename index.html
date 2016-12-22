@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="juli" >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dr Juliana Küster Filipe Bowles</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/components/components.js"></script>
+    
+  </head>
+
+  <body ng-controller='juliController' >
+    <div class="container ">
+      <div class="row center">
+        <div id="marginLeft" class="col-sm-1"></div>
+        <div class="col-md-4 ">
+          <img src="img/juliana.jpg" class="img-responsive" style="border-radius: 10%"/>
+        </div>
+        <div class="col-md-6 right" style="background-color: none;">
+          <h2><strong>{{user.name}}</strong></h2>
+          <ul class="list-group">
+            <li class="list-group-custom">Lecturer, 
+              <a href="http://www.cs.st-andrews.ac.uk/">School of Computer Science</a>,
+              <a href="http://www.st-andrews.ac.uk/">University of St Andrews</a></li>
+            <li class="list-group-custom">Member of the 
+              <a href="http://www.cs.st-andrews.ac.uk/?q=node/60&amp;id=se">Systems Engineering</a> and
+              <a href="http://www.cs.st-andrews.ac.uk/?q=node/120"> Computational Logic</a> groups</li>
+            <li class="list-group-custom">Disability Coordinator for Computer Science</li>
+            <li class="list-group-custom">Welfare and Equality Officer, Computer Science</li>
+            <li class="list-group-custom">
+              <a href="http://erasmusmundus.ie/courses/desem/">Erasmus Mundus MSc in Dependable Software Systems (DESEM)</a>:<br>
+              Programme Director at the University of St Andrews</li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="navbar nav-tabs container-fluid" >
+        <a ng-repeat="(interest, link) in interests" href="{{'/'+ link}}" class="btn btn-secondary btn-lg " 
+        role="button" aria-pressed="true"><b>{{interest}}</b></a>
+        <a class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+        aria-expanded="false"><b>Misc  </b><span class="caret"></span></a>
+        <ul class="dropdown-menu pull-right">
+          <li><a ng-repeat="(interest, link) in otherInterests" href="{{'/'+ link}}">{{interest}}</a></li>
+        </ul>
+      </nav>
+
+      <div class="container col-lg-11  custom-well"  ng-view></div>
+    </div>
+  </body>
+</html>

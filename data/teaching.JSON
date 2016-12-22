@@ -1,0 +1,17 @@
+{
+  "teachings": [
+    {
+      "year": "Academic Year 2016/17",
+      "subjects": [
+        "CS4052 Logic and Software Verification (Martinmas Semester)"
+      ]
+    },
+    {
+      "year": "Academic Year 2015/16",
+      "subjects": [
+        "CS4052 Logic and Software Verification (Martinmas Semester)",
+        "CS5032 Critical Systems Engineering (Candlemas Semester)"
+      ]
+    }
+  ]
+}
